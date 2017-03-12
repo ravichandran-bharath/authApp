@@ -2,7 +2,7 @@
     <span>Admin-Panel</span>
     <span class="spacer"></span>
     <button md-icon-button [mdMenuTriggerFor]="menu">
-      <md-icon>more_vert</md-icon>
+      <md-icon>account circle</md-icon>
     </button>
     <md-menu #menu="mdMenu">
       <button md-menu-item disabled>
@@ -20,8 +20,11 @@
     </md-menu>
 </md-toolbar>
 
+<app-search></app-search>
+
+
 <md-tab-group>
-  <md-tab label="Create Orders"><app-table></app-table></md-tab>
+  <md-tab label="Orders"><app-table></app-table></md-tab>
   <md-tab label="Delivery Person">Content 2</md-tab>
   <md-tab label="Users">Content 3</md-tab>
   <md-tab label="Team">Content 4</md-tab>

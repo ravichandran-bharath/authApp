@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+@import '~@angular/material/core/theming/prebuilt/indigo-pink.css';
 
 body {
     background:#212017;
@@ -59,6 +59,7 @@ h2 {
     font-size:.8em;
     color:#3B8598;
 }
+
 #goback span {
     font-size:1em;
 }

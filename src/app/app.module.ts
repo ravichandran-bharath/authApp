@@ -15,6 +15,7 @@ import 'hammerjs';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PanelComponent } from './panel/panel.component';
 import { TableComponent } from './table/table.component';
+import { SearchComponent } from './search/search.component';
 
 
 export const firebaseConfig = {
@@ -34,7 +35,8 @@ export const firebaseConfig = {
     MembersComponent,
     NavbarComponent,
     PanelComponent,
-    TableComponent
+    TableComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

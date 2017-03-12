@@ -15,7 +15,7 @@ import 'hammerjs';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PanelComponent } from './panel/panel.component';
 import { TableComponent } from './table/table.component';
-import { SearchComponent } from './search/search.component';
+
 import { TabsComponent } from './tabs/tabs.component';
 
 
@@ -37,7 +37,6 @@ export const firebaseConfig = {
     NavbarComponent,
     PanelComponent,
     TableComponent,
-    SearchComponent,
     TabsComponent
   ],
   imports: [

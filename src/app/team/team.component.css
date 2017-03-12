@@ -1,0 +1,13 @@
+
+button{
+        width: 50%;
+        margin: 10%;
+}
+
+input {
+    width: 500px;
+}
+
+md-select{
+    margin: 5%;
+}

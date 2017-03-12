@@ -14,9 +14,15 @@ import { routes } from './app.routes';
 import 'hammerjs';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PanelComponent } from './panel/panel.component';
-import { TableComponent } from './table/table.component';
+
 
 import { TabsComponent } from './tabs/tabs.component';
+import { OrdersComponent } from './orders/orders.component';
+import { DeliveryComponent } from './delivery/delivery.component';
+import { UsersComponent } from './users/users.component';
+import { TeamComponent } from './team/team.component';
+import { SettingsComponent } from './settings/settings.component';
+import { ReportsComponent } from './reports/reports.component';
 
 
 export const firebaseConfig = {
@@ -36,8 +42,13 @@ export const firebaseConfig = {
     MembersComponent,
     NavbarComponent,
     PanelComponent,
-    TableComponent,
-    TabsComponent
+    TabsComponent,
+    OrdersComponent,
+    DeliveryComponent,
+    UsersComponent,
+    TeamComponent,
+    SettingsComponent,
+    ReportsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,51 @@
+<md-card>
+  <md-toolbar>
+    <md-input-container>
+        <input mdInput placeholder="Search">
+    </md-input-container>
+        <button md-raised-button>Search!!!</button>
+    <md-select placeholder="Favorite food">
+        <md-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+        </md-option>
+    </md-select>
+  </md-toolbar>
+</md-card>
+
+<md-card>
+  <table>
+        <thead>
+          <tr>
+              <th data-field="id">Time</th>
+              <th data-field="name">Name</th>
+              <th data-field="price">Mobile</th>
+              <th data-field="price">Status</th>
+              <th data-field="price">Comments</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Alvin</td>
+            <td>Eclair</td>
+            <td>$0.87</td>
+            <td>$0.87</td>
+            <td>$0.87</td>
+          </tr>
+          <tr>
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>$3.76</td>
+            <td>$0.87</td>
+            <td>$0.87</td>
+          </tr>
+          <tr>
+            <td>Jonathan</td>
+            <td>Lollipop</td>
+            <td>$7.00</td>
+            <td>$0.87</td>
+            <td>$0.87</td>
+          </tr>
+        </tbody>
+      </table>
+</md-card>

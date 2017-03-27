@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { Customer } from './../customers';
+import { CustomersService } from './../customers.service'
 
 @Component({
   selector: 'app-reports',

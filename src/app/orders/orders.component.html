@@ -16,11 +16,12 @@
   <table>
         <thead>
           <tr>
-              <th data-field="id">Time</th>
-              <th data-field="name">Name</th>
-              <th data-field="price">Mobile</th>
-              <th data-field="price">Status</th>
-              <th data-field="price">Comments</th>
+              <th data-field="id">Order ID</th>
+              <th data-field="orderby">Ordered By</th>
+              <th data-field="mobile">Mobile No</th>
+              <th data-field="assigned">Assigned To</th>
+              <th data-field="address">Delivery Details</th>
+              <th data-field="status">Status</th>
           </tr>
         </thead>
 
@@ -29,21 +30,39 @@
             <td>Alvin</td>
             <td>Eclair</td>
             <td>$0.87</td>
-            <td>$0.87</td>
+            <td>
+              <md-select>
+                  <md-option *ngFor="let food of foods" [value]="food.value">
+                      {{ food.viewValue }}
+                  </md-option>
+              </md-select>
+            </td>
             <td>$0.87</td>
           </tr>
           <tr>
             <td>Alan</td>
             <td>Jellybean</td>
             <td>$3.76</td>
-            <td>$0.87</td>
+            <td>
+              <md-select>
+                  <md-option *ngFor="let food of foods" [value]="food.value">
+                      {{ food.viewValue }}
+                  </md-option>
+              </md-select>
+            </td>
             <td>$0.87</td>
           </tr>
           <tr>
             <td>Jonathan</td>
             <td>Lollipop</td>
             <td>$7.00</td>
-            <td>$0.87</td>
+            <td>
+              <md-select>
+                  <md-option *ngFor="let food of foods" [value]="food.value">
+                      {{ food.viewValue }}
+                  </md-option>
+              </md-select>
+            </td>
             <td>$0.87</td>
           </tr>
         </tbody>

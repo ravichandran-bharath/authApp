@@ -5,6 +5,7 @@ import { MaterialModule } from '@angular/material';
 import { HttpModule } from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
 import {initializeApp,database} from 'firebase';
+import {FirebaseRef} from "angularfire2";
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { EmailComponent } from './email/email.component';
@@ -29,6 +30,7 @@ import { ReportsComponent } from './reports/reports.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { CustomerComponent } from './customer/customer.component';
 import { Customer } from './customers';
+import { CustomerKeyvalPipe } from './customer-keyval.pipe';
 
 
 
@@ -43,6 +45,8 @@ export const firebaseConfig = {
 initializeApp(firebaseConfig);
 
 database().ref().on('value', snapshot => console.log(snapshot.val()));
+
+
 
 @NgModule({
   declarations: [
@@ -62,7 +66,8 @@ database().ref().on('value', snapshot => console.log(snapshot.val()));
     ReportsComponent,
     SamplelogComponent,
     PaginationComponent,
-    CustomerComponent
+    CustomerComponent,
+    CustomerKeyvalPipe
   ],
   imports: [
     BrowserModule,

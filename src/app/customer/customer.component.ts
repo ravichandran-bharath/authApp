@@ -7,10 +7,7 @@ import { CustomersService } from './../customers.service'
 selector: 'app-api',
 template: ` 
 <ul class="">
-<li *ngFor="let customer of customers">
-<span class=""> 
-{{customer.Id}} </span> {{customer.Name}}
-</li>
+
 </ul>`,
     }) 
 
@@ -23,7 +20,7 @@ template: `
 }
 
 ngOnInit() {
-    this.customerService.getCustomers()
+    this.customerService.findAllusersInfo()
         .subscribe(
         customers =>
         {

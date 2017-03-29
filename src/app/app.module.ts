@@ -19,7 +19,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PanelComponent } from './panel/panel.component';
 import { SamplelogComponent } from './samplelog/samplelog.component';
 
-
 import { TabsComponent } from './tabs/tabs.component';
 import { OrdersComponent } from './orders/orders.component';
 import { DeliveryComponent } from './delivery/delivery.component';
@@ -35,11 +34,11 @@ import { CustomerKeyvalPipe } from './customer-keyval.pipe';
 
 
 export const firebaseConfig = {
-  apiKey: 'AIzaSyBHfCpwcfRyQTtHHSSBBggkMusoc3TsR14',
-  authDomain: 'angular-2-test-d13e2.firebaseapp.com',
-  databaseURL: 'https://angular-2-test-d13e2.firebaseio.com',
-  storageBucket: 'angular-2-test-d13e2.appspot.com',
-  messagingSenderId: '92816780006'
+  apiKey: "AIzaSyBHfCpwcfRyQTtHHSSBBggkMusoc3TsR14",
+    authDomain: "angular-2-test-d13e2.firebaseapp.com",
+    databaseURL: "https://angular-2-test-d13e2.firebaseio.com",
+    storageBucket: "angular-2-test-d13e2.appspot.com",
+    messagingSenderId: "92816780006"
 };
 
 initializeApp(firebaseConfig);

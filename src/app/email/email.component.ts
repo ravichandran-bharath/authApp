@@ -27,15 +27,14 @@ export class EmailComponent implements OnInit {
 
   onSubmit(formData) {
     if(formData.valid) {
-      console.log(formData.value);
       this.af.auth.login({
         email: formData.value.email,
         password: formData.value.password
       },
-      {
-        provider: AuthProviders.Password,
-        method: AuthMethods.Password,
-      }).then(
+      // {
+      //   provider: AuthProviders.Password,
+      //   method: AuthMethods.Password,
+      // }).then(
         (success) => {
         console.log(success);
         this.router.navigate(['/panel']);
@@ -43,6 +42,7 @@ export class EmailComponent implements OnInit {
         (err) => {
         console.log(err);
         this.error = err;
+        this.router.navigate(['/login']);
       })
     }
   }

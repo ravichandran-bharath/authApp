@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { Customer } from './../customers';
-import { CustomersService } from './../customers.service'
+// import { CustomersService } from './../customers.service'
 import {Injectable} from '@angular/core';
 import {Observable, Subject} from "rxjs/Rx";
 import {AngularFireDatabase} from "angularfire2";

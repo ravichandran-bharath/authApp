@@ -1,11 +1,14 @@
 <md-card>
   <md-toolbar>
     <md-input-container>
-        <input mdInput placeholder="Search">
+        <input mdInput placeholder="Search" (keyup)="search(input.value)" #input>
     </md-input-container>
         <button md-raised-button>Search!!!</button>
   </md-toolbar>
 </md-card>
+<ul *ngFor="let user of users">
+  <li>{{users.name}}</li>
+</ul>
 
 <md-card>
   <table>
@@ -13,7 +16,7 @@
           <tr>
               <th data-field="id">ID</th>
               <th data-field="name">Name</th>
-              <th data-field="mobile">Mobile</th>
+              <th data-field="mobile">Phone Number</th>
               <th data-field="address">Address</th>
               <th data-field="refcode">Referral Code</th>
               <th data-field="rating">Rating</th>

@@ -1,64 +1,72 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from './../users.service';
-import { HttpModule } from '@angular/http';
-import { Customer } from './../customers';
-import { AngularFireModule } from 'angularfire2';
-import {initializeApp,database} from 'firebase';
-import {FirebaseRef} from "angularfire2";
-import { firebaseConfig } from '../../environments/firebase.config';
-import { User } from '../user';
+import { UsersService } from './users.service'; 
 
-import { Injectable } from '@angular/core';
-import "rxjs/Rx";
-import {AngularFireDatabase} from "angularfire2";
-import { Observable } from "rxjs/Observable";
 
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.css'],
-  providers: [UsersService]
+  providers: [ UsersService ]
 })
-export class UsersComponent implements OnInit {
+export class UsersComponent implements OnInit{
+  users:any;
 
-  // data: string;
-  // allUsers: User[];
-  // filtered: User[];
-  users: User[];
+    constructor(private usersService:UsersService) {}
 
-    constructor(private usersService: UsersService){
+    ngOnInit() {
+      this.usersService.getUsers().subscribe(users =>{
+        console.log(users);
+        this.users = users;
+      })
+    }
 
-      //  const users$ : Observable<Customer[]> = af.list('usersInfo');
-
-      //  const userone$ =  af.object('usersInfo/DhQjyxz6NPf54pYLwkLP2BXNTvU2');
-
-      //  userone$.subscribe(console.log);
+  //   onSearch() {
+  //   this.searchTerm$.next(this.searchForm.value.term);
+  // }
 }
+  //   private af: AngularFire,
+  //   private route: ActivatedRoute,
+  //   private router: Router){
+  //     this.user = af.database.list('/usersInfo'); 
+  //   }
 
 
-  ngOnInit() {
+  // ngOnInit() {
+  //   //this.user = this.usersService.getUsers();
+  //   console.log(this.user+"sss");
+  // }
 
-    this.usersService.getUsers().subscribe(users => {
-      this.users = users;
-    });
+  // ngOnDestroy(){
 
-
-    // this.usersService.findAllUsers()
-    //   .do(console.log)
-    //   .subscribe(
-    //     users => this.allUsers = this.filtered = users
-    //   )
-    
-    // this._customerService.dataString$.subscribe(
-    //   data => {
-    //     this.data = data; 
-    //   });
-  }
-
-  // search(search:string){
-
-  //   this.filtered = this.allUsers.filter(user => _user.name.includes(search) );
+  //   this.subscription.unsubscribe();
 
   // }
 
-}
+
+  // constructor(private af: AngularFire){
+
+  //     const users$: FirebaseListObservable<any> = af.database.list('usersInfo/');
+
+  //     users$.subscribe(
+  //       val => console.log(val)
+  //     );
+
+  // }
+
+  // public userProfile: firebase.database.Reference;
+
+  // public currentUser: firebase.User;
+
+  // constructor(){
+  //   this.currentUser = firebase.auth().currentUser;
+
+  //   this.userProfile = firebase.database().ref('usersInfo/');
+  // }
+
+  // getUserProfile(): firebase.database.Reference {
+  //   return this.getUserProfile.child(this.currentUser.uid);
+  // }
+
+
+
+// }

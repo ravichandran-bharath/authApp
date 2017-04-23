@@ -1,14 +1,16 @@
 <md-card>
   <md-toolbar>
-    <md-input-container>
-        <input mdInput placeholder="Search" (keyup)="search(input.value)" #input>
-    </md-input-container>
-        <button md-raised-button>Search!!!</button>
+    <!--<form [ngFormModel]="searchForm" (ngSubmit)="onSearch()"
+					class="form-group has-feedback"
+					[ngClass]="{'has-error': error}">
+      <md-input-container>
+          <input mdInput placeholder="Search" [ngFormControl]="searchForm.controls.term" (keyup)="search(input.value)" #input>
+      </md-input-container>
+          <button md-raised-button>Search!!!</button>
+    </form>-->
   </md-toolbar>
 </md-card>
-<ul *ngFor="let user of users">
-  <li>{{users.name}}</li>
-</ul>
+
 
 <md-card>
   <table>
@@ -19,32 +21,42 @@
               <th data-field="mobile">Phone Number</th>
               <th data-field="address">Address</th>
               <th data-field="refcode">Referral Code</th>
+              <th data-field="email">Email</th>
               <th data-field="rating">Rating</th>
           </tr>
         </thead>
 
         <tbody>
-          <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
-            <td>$0.87</td>
-            <td>$0.87</td>
-          </tr>
-          <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
-            <td>$0.87</td>
-            <td>$0.87</td>
-          </tr>
-          <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
-            <td>$0.87</td>
-            <td>$0.87</td>
-          </tr>
+            <tr *ngFor="let user of users">
+              <td>have to fetch the id</td>
+              <td>{{user.name}}</td>
+              <td>{{user.phoneNumber}}</td>
+              <td>Address</td>
+              <td>{{user.myReferralCode}}</td>
+              <td>{{user.email}}</td>
+              <td>5</td>
+            </tr>
         </tbody>
       </table>
 </md-card>
+
+<!--<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Phone Number</th>
+      <th>Email</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <th scope="row">have to fetch</th>
+      <td>{{user.name}}</td>
+      <td>{{user.phoneNumber}}</td>
+      <td>{{user.email}}</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>-->

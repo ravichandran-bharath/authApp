@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { OrdersService } from './orders.service';
 
 @Component({
   selector: 'app-orders',
   templateUrl: './orders.component.html',
-  styleUrls: ['./orders.component.css']
+  styleUrls: ['./orders.component.css'],
+  providers: [ OrdersService ]
 })
 export class OrdersComponent implements OnInit {
+  orders: any;
 
 
   foods = [
@@ -14,9 +17,13 @@ export class OrdersComponent implements OnInit {
     {value: 'tacos-2', viewValue: 'Tacos'}
   ];
 
-  constructor() { }
+  constructor(private ordersService: OrdersService) { }
 
   ngOnInit() {
+    this.ordersService.getOrders().subscribe(orders => {
+      console.log(orders);
+      this.orders = orders;
+    })
   }
 
 }

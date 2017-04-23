@@ -37,7 +37,7 @@ import { CustomerKeyvalPipe } from './customer-keyval.pipe';
 
 initializeApp(firebaseConfig);
 
-var root = database().ref();
+var root = database().ref('usersInfo');
 
   root.on('value', function(snap) {
 
@@ -77,7 +77,7 @@ var root = database().ref();
     MaterialModule.forRoot(),
     routes
   ],
-  providers: [AuthGuard ], //, CustomersService
+  providers: [AuthGuard], //, CustomersService
   bootstrap: [AppComponent]
 })
 export class AppModule { }
